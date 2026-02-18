@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home Essentials</title>
+    <meta name="description" content="Premium smart home devices for modern living">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            min-height: 100vh;
+            color: #f1f5f9;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .hero-banner {
+            text-align: center;
+            padding: 48px 20px 32px;
+        }
+        .hero-banner h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-banner p {
+            color: #94a3b8;
+            font-size: 16px;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .product-card {
+            background: linear-gradient(145deg, #1e293b, #334155);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #334155;
+        }
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        .product-card.highlight {
+            border: 2px solid #60a5fa;
+            box-shadow: 0 0 30px rgba(96, 165, 250, 0.2);
+        }
+        .card-badge {
+            background: #334155;
+            color: #94a3b8;
+            text-align: center;
+            padding: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .product-card.highlight .card-badge {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: #fff;
+        }
+        .card-body {
+            padding: 28px 24px;
+            text-align: center;
+        }
+        .product-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            color: #60a5fa;
+        }
+        .product-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .product-desc {
+            font-size: 13px;
+            color: #94a3b8;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .price-tag {
+            margin-bottom: 20px;
+        }
+        .price-tag .amount {
+            font-size: 42px;
+            font-weight: 700;
+            color: #34d399;
+        }
+        .price-tag .amount sup {
+            font-size: 20px;
+        }
+        .price-tag .original {
+            text-decoration: line-through;
+            color: #64748b;
+            font-size: 14px;
+            margin-left: 8px;
+        }
+        .features-list {
+            list-style: none;
+            margin-bottom: 24px;
+            font-size: 13px;
+        }
+        .features-list li {
+            padding: 8px 0;
+            color: #34d399;
+            font-weight: 500;
+        }
+        .features-list li i {
+            margin-right: 8px;
+        }
+        .buy-btn {
+            display: block;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            color: #fff;
+            font-weight: 600;
+            font-size: 15px;
+            padding: 14px 24px;
+            border-radius: 12px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .buy-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
+        }
+        .payment-icons {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 16px;
+            font-size: 24px;
+            color: #64748b;
+        }
+        .site-footer {
+            background: #0f172a;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 48px;
+            font-size: 12px;
+            color: #64748b;
+        }
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 20px;
+        }
+        .footer-nav a {
+            color: #94a3b8;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .footer-nav a:hover {
+            color: #60a5fa;
+        }
+        .disclaimer {
+            max-width: 500px;
+            margin: 16px auto 0;
+            line-height: 1.5;
+        }
+        @media (max-width: 900px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 600px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+                max-width: 360px;
+            }
+            .hero-banner h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="hero-banner">
+        <h1>Smart Home Essentials</h1>
+        <p>Premium devices for modern living</p>
+    </header>
+
+    <section class="products-grid">
+        <a href="#" class="product-card">
+            <div class="card-badge">Basic</div>
+            <div class="card-body">
+                <i class="fa-solid fa-lightbulb product-icon"></i>
+                <h3 class="product-name">Smart Bulb Kit</h3>
+                <p class="product-desc">4 WiFi-enabled RGB bulbs with voice control support</p>
+                <div class="price-tag">
+                    <span class="amount"><sup>$</sup>49</span>
+                    <span class="original">$89</span>
+                </div>
+                <ul class="features-list">
+                    <li><i class="fa-solid fa-check"></i> Works with Alexa & Google</li>
+                    <li><i class="fa-solid fa-check"></i> 16 Million Colors</li>
+                </ul>
+                <span class="buy-btn">Shop Now</span>
+                <div class="payment-icons">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-brands fa-cc-amex"></i>
+                    <i class="fa-brands fa-cc-paypal"></i>
+                </div>
+            </div>
+        </a>
+
+        <a href="#" class="product-card highlight">
+            <div class="card-badge">Most Popular</div>
+            <div class="card-body">
+                <i class="fa-solid fa-house-signal product-icon"></i>
+                <h3 class="product-name">Complete Hub System</h3>
+                <p class="product-desc">Central hub + 8 smart devices bundle</p>
+                <div class="price-tag">
+                    <span class="amount"><sup>$</sup>199</span>
+                    <span class="original">$399</span>
+                </div>
+                <ul class="features-list">
+                    <li><i class="fa-solid fa-check"></i> All-in-One Control</li>
+                    <li><i class="fa-solid fa-check"></i> Free Installation Guide</li>
+                    <li><i class="fa-solid fa-check"></i> 2-Year Warranty</li>
+                </ul>
+                <span class="buy-btn">Shop Now</span>
+                <div class="payment-icons">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-brands fa-cc-amex"></i>
+                    <i class="fa-brands fa-cc-paypal"></i>
+                </div>
+            </div>
+        </a>
+
+        <a href="#" class="product-card">
+            <div class="card-badge">Security</div>
+            <div class="card-body">
+                <i class="fa-solid fa-video product-icon"></i>
+                <h3 class="product-name">Security Camera Set</h3>
+                <p class="product-desc">2 outdoor cameras with night vision</p>
+                <div class="price-tag">
+                    <span class="amount"><sup>$</sup>129</span>
+                    <span class="original">$249</span>
+                </div>
+                <ul class="features-list">
+                    <li><i class="fa-solid fa-check"></i> 1080p HD Recording</li>
+                    <li><i class="fa-solid fa-check"></i> Motion Detection</li>
+                </ul>
+                <span class="buy-btn">Shop Now</span>
+                <div class="payment-icons">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-brands fa-cc-amex"></i>
+                    <i class="fa-brands fa-cc-paypal"></i>
+                </div>
+            </div>
+        </a>
+    </section>
+
+    <footer class="site-footer">
+        <nav class="footer-nav">
+            <a href="footer/privacy.html">Privacy Policy</a>
+            <a href="footer/terms.html">Terms of Service</a>
+            <a href="footer/disclaimer.html">Disclaimer</a>
+        </nav>
+        <p>Copyright 2025 Smart Home Essentials. All rights reserved.</p>
+        <p class="disclaimer">This site is not affiliated with Amazon, Google, or Apple. Product names are trademarks of their respective owners.</p>
+    </footer>
+</body>
+</html>
