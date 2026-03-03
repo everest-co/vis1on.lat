@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CNN News</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/all.min.css" />
+  <script>!function (i, n) { i._plt = i._plt || (n && n.timeOrigin ? n.timeOrigin + n.now() : Date.now()) }(window, performance);</script>
+  <link rel="preload"
+    href="https://scripts.converteai.net/0cbde239-7859-447c-9db6-b9e1e047c62e/players/698fbac97a04c8d380d7cbc8/v4/player.js"
+    as="script">
+  <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script">
+  <link rel="preload"
+    href="https://cdn.converteai.net/0cbde239-7859-447c-9db6-b9e1e047c62e/698fba16626614ea48140f54/main.m3u8"
+    as="fetch">
+  <link rel="dns-prefetch" href="https://cdn.converteai.net">
+  <link rel="dns-prefetch" href="https://scripts.converteai.net">
+  <link rel="dns-prefetch" href="https://images.converteai.net">
+  <link rel="dns-prefetch" href="https://api.vturb.com.br">
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/quiz.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="https://burnpeak.com/assets/pages/vsl/css/fbcomments.css">
+  <!-- ClickBank Hop -->
+  <script>
+    window.clickbank = {
+      vendor: "gelatide"
+    };
+  </script>
+  <script src="https://scripts.clickbank.net/hop.min.js" defer></script>
+  <script type="text/javascript" src="https://lp.vis1on.lat/track.js?rtkcmpid=69a757ff0324cd1da3dcc356"></script>
+</head>
+
+<body>
+  <main>
+    <header class="main-header">
+      <div class="container">
+        <div class="header-content">
+          <div class="header-left">
+            <button id="menuBtn" class="mobile-menu-button" aria-label="Menu">
+              <i class="fas fa-bars"></i>
+            </button>
+            <a href="/" class="logo">
+              <span class="logo-cnn">CNN</span>
+              <span class="logo-health">Health</span>
+            </a>
+          </div>
+          <nav class="main-nav">
+            <a href="#">Wellness</a>
+            <a href="#">Food</a>
+            <a href="#">Fitness</a>
+            <a href="#">Medical News</a>
+          </nav>
+          <div class="header-right">
+            <a href="#" class="header-action">
+              <i class="far fa-clock"></i> <span>Watch</span>
+            </a>
+            <a href="#" class="header-action">
+              <i class="fas fa-headphones"></i> <span>Listen</span>
+            </a>
+            <a href="#" class="header-action">
+              <i class="fas fa-tv"></i>
+              <span class="live-tv-text">Live TV</span>
+            </a>
+            <button class="search-button" aria-label="Search">
+              <i class="fas fa-search"></i>
+            </button>
+            <a href="#" class="sign-in-button">Sign In</a>
+          </div>
+        </div>
+      </div>
+      <div id="mobileMenu" class="mobile-menu hidden">
+        <a href="#">Wellness</a>
+        <a href="#">Food</a>
+        <a href="#">Fitness</a>
+        <a href="#">Medical News</a>
+        <div class="mobile-menu-divider"></div>
+        <a href="#" class="mobile-action"><i class="far fa-clock"></i> <span>Watch</span></a>
+        <a href="#" class="mobile-action"><i class="fas fa-headphones"></i> <span>Listen</span></a>
+        <a href="#" class="mobile-action"><i class="fas fa-tv"></i>
+          <span class="live-tv-text">Live TV</span></a>
+        <a href="#" class="mobile-action"><i class="fas fa-user"></i> <span>Sign In</span></a>
+      </div>
+    </header>
+
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Dr. Oz Reveals the Gelatin Recipe to Lose 15 Pounds Before March Ends
+          </h1>
+          <div class="video-container">
+            <div>
+              <div id="fullscreenDiv" class="h-0 hidden"></div>
+              <vturb-smartplayer id="vid-698fbac97a04c8d380d7cbc8" style="display: block; margin: 0 auto; width: 100%;
+              max-width: 400px;"></vturb-smartplayer>
+              <script
+                type="text/javascript"> var s = document.createElement("script"); s.src = "https://scripts.converteai.net/0cbde239-7859-447c-9db6-b9e1e047c62e/players/698fbac97a04c8d380d7cbc8/v4/player.js", s.async = !0, document.head.appendChild(s); </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== QUIZ + PRODUCTS (hidden until pitch time) ========== -->
+    <div class="invisible" id="quiz-outer">
+
+      <!-- Quiz Section -->
+      <div class="quiz-wrapper" id="quiz-section">
+        <div class="quiz-container">
+          <div class="progress-container" id="progressContainer">
+            <div class="progress-info">
+              <div class="step-counter">
+                <i class="fas fa-star"></i>
+                <span>Step <span id="currentStep">1</span> of <span id="totalSteps">7</span></span>
+              </div>
+              <div class="step-counter">
+                <span id="progressPercent">0</span>%
+              </div>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" id="progressBar"></div>
+            </div>
+          </div>
+
+          <div class="quiz-content">
+            <!-- Step 0: Welcome -->
+            <div class="step active" id="step0">
+              <div class="welcome-screen">
+                <div class="welcome-icon"><i class="fas fa-brain"></i></div>
+                <h1>Find Your Ideal <span class="highlight">Gelatide</span> Formula</h1>
+                <p class="subtitle">Answer these quick questions to craft a powerful, customized solution—perfectly
+                  aligned with your body, your goals, and your lifestyle. Get ready for results you'll see and feel!</p>
+                <button class="btn-quiz btn-quiz-green" onclick="nextStep(1)">
+                  Let's Start! <i class="fas fa-arrow-right btn-icon"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Step 1: Age Range -->
+            <div class="step" id="step1">
+              <div class="question-header">
+                <div class="question-label"><i class="fas fa-calendar-alt"></i> What's your age range?</div>
+                <p class="question-subtitle">This helps us optimize your formula</p>
+              </div>
+              <div class="options-grid">
+                <div class="option-card" onclick="selectOption(this, 1, 2)">
+                  <div class="option-text">18-29 years</div>
+                  <div class="option-subtext">Young Adult</div>
+                </div>
+                <div class="option-card" onclick="selectOption(this, 1, 2)">
+                  <div class="option-text">30-44 years</div>
+                  <div class="option-subtext">Prime Years</div>
+                </div>
+                <div class="option-card" onclick="selectOption(this, 1, 2)">
+                  <div class="option-text">45-59 years</div>
+                  <div class="option-subtext">Experienced</div>
+                </div>
+                <div class="option-card" onclick="selectOption(this, 1, 2)">
+                  <div class="option-text">60+ years</div>
+                  <div class="option-subtext">Golden Years</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2: Current Weight -->
+            <div class="step" id="step2">
+              <div class="question-header">
+                <div class="question-label"><i class="fas fa-weight"></i> What's your current weight range?</div>
+                <p class="question-subtitle">Select the range that fits you best</p>
+              </div>
+              <div class="options-grid">
+                <div class="option-card" onclick="selectOption(this, 2, 3)">
+                  <div class="option-text">100-150 lbs</div>
+                  <div class="option-subtext">Light Weight</div>
+                </div>
+                <div class="option-card" onclick="selectOption(this, 2, 3)">
+                  <div class="option-text">151-200 lbs</div>
+                  <div class="option-subtext">Moderate Weight</div>
+                </div>
+                <div class="option-card" onclick="selectOption(this, 2, 3)">
+                  <div class="option-text">201-250 lbs</div>
+                  <div class="option-subtext">Heavy Weight</div>
+                </div>
+                <div class="option-card" onclick="selectOption(this, 2, 3)">
+                  <div class="option-text">250+ lbs</div>
+                  <div class="option-subtext">Extra Heavy</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Height Range -->
+            <div class="step" id="step3">
+              <div class="question-header">
+                <div class="question-label"><i class="fas fa-ruler-vertical"></i> What's your height range?</div>
+                <p class="question-subtitle">This helps calculate your ideal dosage</p>
+              </div>
+              <div class="options-grid">
+                <div class="option-card" onclick="selectOption(this, 3, 4)">
+                  <div class="option-text">Under 5'4"</div>
+                  <div class="option-subtext">Shorter Height</div>
+                </div>
+                <div class="option-card" onclick="selectOption(this, 3, 4)">
+                  <div class="option-text">5'4" - 5'8"</div>
+                  <div class="option-subtext">Average Height</div>
+                </div>
+                <div class="option-card" onclick="selectOption(this, 3, 4)">
+                  <div class="option-text">5'9" - 6'1"</div>
+                  <div class="option-subtext">Tall Height</div>
+                </div>
+                <div class="option-card" onclick="selectOption(this, 3, 4)">
+                  <div class="option-text">Over 6'1"</div>
+                  <div class="option-subtext">Very Tall</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 4: Weight Loss Goal -->
+            <div class="step" id="step4">
+              <div class="question-header">
+                <div class="question-label"><i class="fas fa-bullseye"></i> How much weight do you want to lose?</div>
+                <p class="question-subtitle">Choose your target goal</p>
+              </div>
+              <div class="options-grid">
+                <div class="option-card" onclick="selectOption(this, 4, 5)">
+                  <div class="option-text">5-15 lbs</div>
+                  <div class="option-subtext">Light Trim</div>
+                </div>
+                <div class="option-card" onclick="selectOption(this, 4, 5)">
+                  <div class="option-text">16-30 lbs</div>
+                  <div class="option-subtext">Moderate Loss</div>
+                </div>
+                <div class="option-card" onclick="selectOption(this, 4, 5)">
+                  <div class="option-text">31-50 lbs</div>
+                  <div class="option-subtext">Major Loss</div>
+                </div>
+                <div class="option-card" onclick="selectOption(this, 4, 5)">
+                  <div class="option-text">50+ lbs</div>
+                  <div class="option-subtext">Full Transform</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 5: Target Areas -->
+            <div class="step" id="step5">
+              <div class="question-header">
+                <div class="question-label"><i class="fas fa-crosshairs"></i> Which areas do you want to target?</div>
+                <p class="question-subtitle">Select all that apply - multiple choices allowed</p>
+              </div>
+              <div class="body-parts-grid">
+                <div class="body-part-card" onclick="toggleBodyPart(this)">
+                  <div class="option-text">Arms</div>
+                </div>
+                <div class="body-part-card" onclick="toggleBodyPart(this)">
+                  <div class="option-text">Belly</div>
+                </div>
+                <div class="body-part-card" onclick="toggleBodyPart(this)">
+                  <div class="option-text">Thighs</div>
+                </div>
+                <div class="body-part-card" onclick="toggleBodyPart(this)">
+                  <div class="option-text">Hips</div>
+                </div>
+                <div class="body-part-card" onclick="toggleBodyPart(this)">
+                  <div class="option-text">Chest</div>
+                </div>
+                <div class="body-part-card" onclick="toggleBodyPart(this)">
+                  <div class="option-text">Overall Body</div>
+                </div>
+              </div>
+              <button class="btn-quiz btn-quiz-green" id="btn-step6" onclick="nextStep(6)"
+                style="opacity: 0.5; pointer-events: none;">
+                Calculate My Formula <i class="fas fa-calculator btn-icon"></i>
+              </button>
+            </div>
+
+            <!-- Step 6: Loading -->
+            <div class="step" id="step6">
+              <div class="loading-screen">
+                <h1>Calculating Your Perfect Formula...</h1>
+                <div class="spinner-container">
+                  <div class="spinner"></div>
+                  <div class="spinner-icon"><i class="fas fa-flask"></i></div>
+                </div>
+                <p class="loading-text">Please wait just a few moments while we calculate the ideal nutrient ratio for
+                  your body.</p>
+                <p class="loading-text">We'll fine-tune every ingredient to ensure you get the results you've been
+                  craving—starting from Day One!</p>
+                <div class="loading-features">
+                  <div class="loading-feature"><i class="fas fa-check-circle"></i><span>Analyzing your profile</span>
+                  </div>
+                  <div class="loading-feature"><i class="fas fa-check-circle"></i><span>Optimizing dosage</span></div>
+                  <div class="loading-feature"><i class="fas fa-check-circle"></i><span>Matching ingredients</span>
+                  </div>
+                  <div class="loading-feature"><i class="fas fa-check-circle"></i><span>Finalizing formula</span></div>
+                </div>
+                <div class="timer" id="countdown">6</div>
+                <p class="loading-text" style="color: var(--violet-1); font-size: 16px;">seconds remaining...</p>
+              </div>
+            </div>
+
+            <!-- Step 7: Results -->
+            <div class="step" id="step7">
+              <div class="results-screen">
+                <div class="congrats-icon"><i class="fas fa-trophy"></i></div>
+                <h1>Congratulations!</h1>
+                <p class="subtitle">Your personalized <span class="highlight">Gelatide formula</span> is ready — and
+                  it's been custom-made to help you reach your weight and wellness goals faster than ever!</p>
+                <div class="results-card">
+                  <div class="results-title"><i class="fas fa-certificate"></i> YOUR CUSTOM FORMULA INCLUDES:</div>
+                  <ul class="benefits-list">
+                    <li><i class="fas fa-check-circle"></i><span>Customized nutrient ratio for YOUR unique body</span>
+                    </li>
+                    <li><i class="fas fa-check-circle"></i><span>Targets your specific problem areas</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>Accelerates metabolism naturally</span></li>
+                    <li><i class="fas fa-check-circle"></i><span>No rebound effect - guaranteed lasting results</span>
+                    </li>
+                    <li><i class="fas fa-check-circle"></i><span>Works from Day One</span></li>
+                  </ul>
+                </div>
+                <div class="discount-box" onclick="showProducts()">
+                  <div class="discount-text"><i class="fas fa-gift"></i> SPECIAL OFFER UNLOCKED!</div>
+                  <div class="discount-highlight">6-BOTTLE PROGRAM<br>MEGA EXCLUSIVE DISCOUNT</div>
+                  <p style="margin-top: 15px; font-size: 16px;">This longer treatment ensures you'll finally defeat the
+                    hidden root cause behind slow metabolism and stubborn fat storage, achieving lasting results without
+                    the rebound effect.</p>
+                </div>
+                <button class="btn-quiz btn-quiz-green" onclick="showProducts()">
+                  <i class="fas fa-rocket"></i> Ready to Start? View Your Options!
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Products Section (hidden until quiz complete) -->
+      <div id="products-section">
+        <div class="ofertas-container">
+          <!-- 2 bottles -->
+          <article class="card card--side card--left">
+            <div class="card__kicker-less">Basic</div>
+            <div class="mobile">
+              <div class="pote-mobile">
+                <div class="h3">2 BOTTLES</div>
+                <div class="sub">60 DAY SUPPLY</div>
+                <img class="pote" src="img/2.png" alt="2 bottles">
+              </div>
+              <div class="pote-mobile">
+                <div style="display: flex; justify-content: center; align-items: center;">
+                  <div class="was"><s>$217</s></div>
+                  <p class="now now--yellow">$177</p>
+                </div>
+                <div class="ship">+ <strong>$9,99</strong> SHIPPING</div>
+                <ul class="bullets">
+                  <li style="color: #2a5ba5"><i class="fa-solid fa-circle-check check check--blue"></i>YOU SAVE $28!
+                  </li>
+                  <li><i class="fa-solid fa-circle-check check check--black"></i>15% DISCOUNT</li>
+                  <li><i class="fa-solid fa-circle-check check check--black"></i>90 DAYS GUARANTEE</li>
+                </ul>
+              </div>
+            </div>
+            <a class="btn-card"
+              href="https://gelatide.pay.clickbank.net/?cbitems=CBIEGLTPP2UNITSAFF&template=glt2units&cbfid=62204">BUY
+              NOW</a>
+            <div class="cards-pay"><img src="img/cards.webp" alt=""></div>
+            <div class="total">Total: <s>$217</s> <strong>$168</strong> <br><small>+ $9.99 SHIPPING</small></div>
+          </article>
+
+          <!-- 6 bottles (BEST VALUE) -->
+          <article class="card card--best">
+            <div class="card__kickermain">BEST VALUE!</div>
+            <div class="card__inner">
+              <div class="mobile">
+                <div class="pote-mobile">
+                  <div class="h3 h3--xl surprise-bounce">6 BOTTLES</div>
+                  <div class="sub-main" style="color:white">180 DAY SUPPLY</div>
+                  <img class="pote" src="img/6.png" alt="6 bottles">
+                </div>
+                <div class="pote-mobile">
+                  <div style="display: flex; justify-content: center; align-items: center;">
+                    <div class="was"><s style="text-decoration-color: black;">$588</s></div>
+                    <p class="now now--green">$294</p>
+                  </div>
+                  <div class="ship"><strong>FREE <span style="color: white;">SHIPPING</span></strong></div>
+                  <ul class="bullets">
+                    <li style="color:#ffd700;"><i class="fa-solid fa-circle-check check check--yellow"></i>YOU SAVE $294
+                    </li>
+                    <li><i class="fa-solid fa-circle-check check check--green"></i>50% DISCOUNT</li>
+                    <li><i class="fa-solid fa-circle-check check check--green"></i>3 FREE BOTTLES</li>
+                  </ul>
+                  <div class="sub" style="color:var(--yellow);margin:10px 0 4px;-webkit-text-stroke: 0.5px #000">180
+                    DAY GUARANTEE</div>
+                  <div class="sub surprise-bounce" style="color:#5CE1E6;-webkit-text-stroke: 0.5px #000">+SURPRISE
+                  </div>
+                </div>
+              </div>
+              <a class="btn-card btn-card--green"
+                href="https://gelatide.pay.clickbank.net/?cbitems=CBIEGLTPP6UNITSAFF&template=glt6units&cbfid=62207">BUY
+                NOW</a>
+              <div class="cards-pay"><img src="img/cards.webp" alt=""></div>
+              <div class="sub" style="color:#e9e0ff; margin-top:8px; -webkit-text-stroke: 0.5px #000">
+                90 DAYS GUARANTEE <br><strong style="color: var(--yellow);">+FREE SHIPPING</strong>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3 bottles -->
+          <article class="card card--side card--right">
+            <div class="card__kicker">Good Value</div>
+            <div class="mobile">
+              <div class="pote-mobile">
+                <div class="h3">3 BOTTLES</div>
+                <div class="sub">90 DAY SUPPLY</div>
+                <img class="pote" src="img/3.png" alt="3 bottles">
+              </div>
+              <div class="pote-mobile">
+                <div style="display: flex; justify-content: center; align-items: center;">
+                  <div class="was"><s>$294</s></div>
+                  <p class="now now--yellow">$217</p>
+                </div>
+                <div class="ship"><strong>FREE SHIPPING</strong></div>
+                <ul class="bullets">
+                  <li style="color: #2a5ba5;"><i class="fa-solid fa-circle-check check check--blue"></i>YOU SAVE $98!
+                  </li>
+                  <li><i class="fa-solid fa-circle-check check check--black"></i>1 FREE BOTTLE</li>
+                  <li><i class="fa-solid fa-circle-check check check--black"></i>30% DISCOUNT</li>
+                  <li><i class="fa-solid fa-circle-check check check--black"></i>90 DAYS GUARANTEE</li>
+                </ul>
+              </div>
+            </div>
+            <a class="btn-card"
+              href="https://gelatide.pay.clickbank.net/?cbitems=CBIEGLTPP3UNITSAFF&template=glt3units&cbfid=62204">BUY
+              NOW</a>
+            <div class="cards-pay"><img src="img/cards.webp" alt=""></div>
+            <div class="total">Total: <s>$294</s> <strong>$217</strong> <br><small><span
+                  style="color: red;">+FREE</span> SHIPPING</small></div>
+          </article>
+        </div>
+
+        <!-- Guarantee Section -->
+        <section class="guarantee-section">
+          <div class="guarantee-container">
+            <h2 class="guarantee-title">
+              100% Satisfaction or Your Money Back <br>
+              <span class="red-highlight">60-Day Unconditional Guarantee</span>
+            </h2>
+            <div class="guarantee-content">
+              <div class="guarantee-badge">
+                <img src="https://getbraindefender.com/assets/main/img/guarantee-badge.webp" alt="Guarantee Badge">
+              </div>
+              <div class="guarantee-text">
+                <p>We're so certain that Gelatide will give you remarkable results that we're willing to shoulder all
+                  the risk for a full 60 days. From the moment your order arrives, start taking Gelatide daily and pay
+                  close attention to how you feel. Within just a few days, you may notice faster thinking and better
+                  memory. Continue for a few weeks or months, and you will feel like your memory has returned to its
+                  healthiest and sharpest self.</p>
+                <p>If at any point during these 60 days you don't feel Gelatide is delivering on the promise we've made,
+                  just let us know. Our team will refund every penny, no questions asked and no need to return anything.
+                </p>
+              </div>
+            </div>
+            <div class="trust-badges">
+              <img src="https://getbraindefender.com/assets/pages/home/img/gmp.png" alt="GMP Certified Badge">
+              <img src="https://getbraindefender.com/assets/pages/home/img/nat.png" alt="Natural Ingredients Badge">
+              <img src="https://getbraindefender.com/assets/pages/home/img/foreign.png" alt="Foreign Production Badge">
+              <img src="https://getbraindefender.com/assets/pages/home/img/gmo.png" alt="Non-GMO Badge">
+            </div>
+          </div>
+        </section>
+      </div>
+
+    </div><!-- /invisible quiz-outer -->
+
+    <div class="smartplayer-scroll-event"></div>
+    <div class="tags-section">
+      <p class="tags-title">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
+          </path>
+        </svg>
+        Stay updated with CNN's investigative reporting
+      </p>
+      <div class="tags-container">
+        <span class="tag">#NaturalRemedies</span>
+        <span class="tag">#HealthBreakthrough</span>
+        <span class="tag">#CNNExclusive</span>
+      </div>
+    </div>
+    <div id="fb-comments" class="container mb-4">
+      <div class="comments-container">
+
+        <div class="comment" data-comment-id="1">
+          <img decoding="async" class="user-avatar" src="https://burnpeak.com/assets/pages/vsl/img/fb/user1.webp"
+            alt="">
+          <div class="comment-data">
+            <div class="user user-background">
+              <p class="name">Sarah Smith</p>
+              <p class="text">
+                OMG! My doctor couldn't believe it. I lost so much belly fat with this gelatin trick that he thought I
+                was
+                starving myself. But my tests show I'm healthier than ever!
+              </p>
+            </div>
+            <div class="buttons">
+              <like>Like</like><span>·</span>
+              <answer>Reply</answer><span>·</span><time>2h</time>
+            </div>
+          </div>
+          <likes>23</likes>
+        </div>
+
+        <div class="comment answer" data-comment-id="1a">
+          <img decoding="async" class="user-avatar" src="https://burnpeak.com/assets/pages/vsl/img/fb/user1-1.webp"
+            alt="">
+          <div class="comment-data">
+            <div class="user user-background">
+              <p class="name">Jennifer Taylor</p>
+              <p class="text"><span style="color: blue;">Sarah Smith</span> Girl, I melted 11 pounds in just a week!
+                This
+                gelatin trick is unreal!</p>
+            </div>
+            <div class="buttons">
+              <like>Like</like><span>·</span>
+              <answer>Reply</answer><span>·</span><time>35 min</time>
+            </div>
+          </div>
+          <likes>17</likes>
+        </div>
+
+        <div class="comment" data-comment-id="2">
+          <img decoding="async" class="user-avatar" src="https://burnpeak.com/assets/pages/vsl/img/fb/user9-1.webp"
+            alt="">
+          <div class="comment-data">
+            <div class="user user-background">
+              <p class="name">Olivia Moore</p>
+              <p class="text">
+                I've been using this gelatin trick for just over 3 weeks, and my belly fat is literally melting off!
+                Even
+                my husband noticed and complimented me today!
+              </p>
+            </div>
+            <div class="buttons">
+              <like>Like</like><span>·</span>
+              <answer>Reply</answer><span>·</span><time>7 min</time>
+            </div>
+          </div>
+          <likes>11</likes>
+        </div>
+
+        <div class="comment" data-comment-id="3">
+          <img decoding="async" class="user-avatar" src="https://burnpeak.com/assets/pages/vsl/img/fb/user1-3.webp"
+            alt="">
+          <div class="comment-data">
+            <div class="user user-background">
+              <p class="name">Jessica Brown</p>
+              <p class="text">
+                Finally, someone explained a solution that melts fat without all the medical jargon! I'm starting the
+                gelatin trick this morning—thank you for being so clear!
+              </p>
+            </div>
+            <div class="buttons">
+              <like>Like</like><span>·</span>
+              <answer>Reply</answer><span>·</span><time>6 min</time>
+            </div>
+          </div>
+          <likes>32</likes>
+        </div>
+
+        <div class="comment" data-comment-id="4">
+          <img decoding="async" class="user-avatar" src="https://burnpeak.com/assets/pages/vsl/img/fb/user1-1.webp"
+            alt="">
+          <div class="comment-data">
+            <div class="user user-background">
+              <p class="name">Jennifer Taylor</p>
+              <p class="text">
+                My binge eating used to control me. But after starting the gelatin trick, I don't crave sweets anymore.
+                I've already melted 19 pounds in two weeks—it feels amazing!
+              </p>
+            </div>
+            <div class="buttons">
+              <like>Like</like><span>·</span>
+              <answer>Reply</answer><span>·</span><time>5 min</time>
+            </div>
+          </div>
+          <likes>6</likes>
+        </div>
+
+        <div class="comment answer" data-comment-id="4a">
+          <img decoding="async" class="user-avatar" src="https://burnpeak.com/assets/pages/vsl/img/fb/user2.webp"
+            alt="">
+          <div class="comment-data">
+            <div class="user user-background">
+              <p class="name">Emily Johnson</p>
+              <p class="text"><span style="color: blue;">Jennifer Taylor</span> That's insane! Did you change anything
+                else or just the gelatin trick?</p>
+            </div>
+            <div class="buttons">
+              <like>Like</like><span>·</span>
+              <answer>Reply</answer><span>·</span><time>1h</time>
+            </div>
+          </div>
+          <likes>34</likes>
+        </div>
+
+        <div class="comment answer" data-comment-id="4b">
+          <img decoding="async" class="user-avatar" src="https://burnpeak.com/assets/pages/vsl/img/fb/user1-1.webp"
+            alt="">
+          <div class="comment-data">
+            <div class="user user-background">
+              <p class="name">Jennifer Taylor</p>
+              <p class="text"><span style="color: blue;">Emily Johnson</span> Nothing else—just the gelatin trick! No
+                diet, no gym. It's wild how much fat I'm melting!</p>
+            </div>
+            <div class="buttons">
+              <like>Like</like><span>·</span>
+              <answer>Reply</answer><span>·</span><time>1h</time>
+            </div>
+          </div>
+          <likes>32</likes>
+        </div>
+
+        <div class="comment" data-comment-id="5">
+          <img decoding="async" class="user-avatar" src="https://burnpeak.com/assets/pages/vsl/img/fb/user2-2.webp"
+            alt="">
+          <div class="comment-data">
+            <div class="user user-background">
+              <p class="name">Ashley Davis</p>
+              <p class="text">
+                Does anyone know if this gelatin trick really works? I'm extremely overweight and feeling desperate!
+              </p>
+            </div>
+            <div class="buttons">
+              <like>Like</like><span>·</span>
+              <answer>Reply</answer><span>·</span><time>1h</time>
+            </div>
+          </div>
+          <likes>34</likes>
+        </div>
+
+        <div class="comment answer" data-comment-id="5a">
+          <img decoding="async" class="user-avatar" src="https://burnpeak.com/assets/pages/vsl/img/fb/user9.webp"
+            alt="">
+          <div class="comment-data">
+            <div class="user user-background">
+              <p class="name">Morgan Rose</p>
+              <p class="text"><span style="color: blue;">Ashley Davis</span> Yes! I looked it up—there are studies
+                backing
+                it. My belly fat is melting away thanks to this gelatin trick. Give it a try!</p>
+            </div>
+            <div class="buttons">
+              <like>Like</like><span>·</span>
+              <answer>Reply</answer><span>·</span><time>1h</time>
+            </div>
+          </div>
+          <likes>31</likes>
+        </div>
+
+        <div class="comment" data-comment-id="6">
+          <img decoding="async" class="user-avatar" src="https://burnpeak.com/assets/pages/vsl/img/fb/user3.webp"
+            alt="">
+          <div class="comment-data">
+            <div class="user user-background">
+              <p class="name">Natalie Clark</p>
+              <p class="text">
+                This is the most honest solution I've seen. No long videos, no upsells—just a simple gelatin trick that
+                melts belly fat. Thank you so much!
+              </p>
+            </div>
+            <div class="buttons">
+              <like>Like</like><span>·</span>
+              <answer>Reply</answer><span>·</span><time>1h</time>
+            </div>
+          </div>
+          <likes>54</likes>
+        </div>
+
+        <div class="comment" data-comment-id="7">
+          <img decoding="async" class="user-avatar" src="https://burnpeak.com/assets/pages/vsl/img/fb/user3-2.webp"
+            alt="">
+          <div class="comment-data">
+            <div class="user user-background">
+              <p class="name">Chloe Garcia</p>
+              <p class="text">
+                After 3 weeks with the gelatin trick, my belly is flat like a board. I've melted 26 pounds without
+                dieting—I feel lighter and more beautiful already!
+              </p>
+            </div>
+            <div class="buttons">
+              <like>Like</like><span>·</span>
+              <answer>Reply</answer><span>·</span><time>1h</time>
+            </div>
+          </div>
+          <likes>59</likes>
+        </div>
+
+        <h4 class="comments-closed">This post is no longer receiving comments!</h4>
+      </div>
+    </div>
+  </main>
+
+
+  <!-- Page scripts: tracking + Vturb reveal -->
+  <script src="js/main.js"></script>
+
+  <!-- Quiz logic -->
+  <script src="js/quiz.js"></script>
+
+</body>
+
+</html>
