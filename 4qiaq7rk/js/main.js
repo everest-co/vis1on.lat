@@ -1,11 +1,11 @@
-// Append URL params to ClickBank links
+// Inject affiliate tag + RT clickid into ClickBank buy links
 (function () {
-    var params = window.location.search;
-    if (!params) return;
-    var extra = params.substring(1);
+    var params = new URLSearchParams(window.location.search);
+    var clickid = params.get('clickid') || params.get('tid') || '';
+
     document.querySelectorAll('.btn-card').forEach(function (el) {
         if (el.href && el.href.indexOf('clickbank.net') !== -1) {
-            el.href = el.href + '&' + extra;
+            el.href = el.href + '&affiliate=gglmkt' + (clickid ? '&tid=' + clickid : '');
         }
     });
 })();
